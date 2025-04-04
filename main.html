@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publication Summary Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>📚 Faculty Publication Summary Generator</h1>
+
+    <div class="file-upload">
+      <input type="file" id="excelFile" accept=".xlsx, .xls">
+    </div>
+
+    <div class="filter">
+      <label>From Year:</label>
+      <input type="number" id="fromYear">
+      <label>To Year:</label>
+      <input type="number" id="toYear">
+      <button onclick="filterByYear()">Filter</button>
+    </div>
+
+    <div id="tableContainer"></div>
+
+    <div class="actions">
+      <button onclick="exportToExcel()">Export to Excel</button>
+      <button onclick="exportToWord()">Export to Word</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
